@@ -5,6 +5,10 @@ import Asmt1.hashTable.QuadraticProbingHashTable;
 import Asmt1.hashTable.SeparateChainingHashTable;
 import Asmt1.hashTable.StringHashFamily;
 
+/**
+ * Written by Tab Tu
+ * Updated Sep.25 2017
+ */
 public class A1_3 {
 
     public static void main( String [ ] args ) {
@@ -20,7 +24,7 @@ public class A1_3 {
                 n *= 2;
                 System.out.print("n = " + n + " | ");
                 String tmus = "";
-/*
+
                 CuckooHashTable<String> Hc = new CuckooHashTable<>(new StringHashFamily(3), 2000);
                 QuadraticProbingHashTable<String> Hq = new QuadraticProbingHashTable<>();
                 SeparateChainingHashTable<Integer> Hs = new SeparateChainingHashTable<>();
@@ -69,7 +73,6 @@ public class A1_3 {
                 tmus += (end - start) + ",hs_r;";
 
                 System.out.println(tmus);
-                 */
             }
             System.out.println("Finished.");
         }
