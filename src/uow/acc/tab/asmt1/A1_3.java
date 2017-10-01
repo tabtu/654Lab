@@ -22,7 +22,7 @@ public class A1_3 {
         }
         end = System.currentTimeMillis();
         long tsum = end - start;
-        System.out.println("The total insert time for " + n + " insertion is : " + tsum + "ms.");
+        System.out.println("The total insert time for " + n + " insertion in CuckooHashTable is : " + tsum + "ms.");
         return Hc;
     }
 
@@ -109,7 +109,7 @@ public class A1_3 {
         final int n = 10000000;
         final int NUMS = 2000000;
 
-        int delcount = q2(q1(n), n);
+        System.out.println(q2(q1(n), n));
         q3(NUMS);
     }
 }

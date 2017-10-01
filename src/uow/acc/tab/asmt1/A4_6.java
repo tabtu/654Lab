@@ -14,6 +14,11 @@ import uow.acc.tab.asmt1.searchtrees.RedBlackBST;
 public class A4_6 {
     public static void main(String[] args) {
         int numItems = 100000;
+
+        Q6(numItems);
+    }
+
+    public static void Q6(int numItems) {
         long start, end;
         String tmus = "";
 
