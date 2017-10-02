@@ -115,13 +115,17 @@ public class Aopt {
     public static void main(String[] args) throws IOException{
         String[] re = ExtFunc.findallfiles("/Users/Kevin/Documents/Workspace/Java/654Lab/W3C Web Pages/Text/", 1);
 
+        System.out.println("Print out the most useful 10 words in the dictionary.");
         // list the most 10 useful words in a dictionary
-        //WordCount(re, 10);
+        WordCount(re, 10);
 
+        String tarkey = "is";
+        System.out.println("Print out the 10 files which use the word " + tarkey + " the most");
         // list the most 10 files which include the keyword
-        //WordAnalysis(re, "is", 10);
+        WordAnalysis(re, tarkey, 10);
 
         // build word dictionary
+        System.out.println("Build words dictionary with SpalyTree.");
         SplayTree<Word> mydict = WordDictionary(re);
         mydict.printTree();
     }
