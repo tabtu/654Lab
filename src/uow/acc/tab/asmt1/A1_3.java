@@ -7,6 +7,7 @@ import uow.acc.tab.asmt1.hashTable.SeparateChainingHashTable;
 import uow.acc.tab.asmt1.hashTable.StringHashFamily;
 
 /**
+ * Answer Sheet for Assignment 1 Tasks 1 - 3
  * Written by Tab Tu
  * Updated Sep.25 2017
  */
