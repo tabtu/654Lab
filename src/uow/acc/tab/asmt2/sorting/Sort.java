@@ -1,4 +1,4 @@
-package sorting;
+package uow.acc.tab.asmt2.sorting;
 
 import java.util.Random;
 import java.util.Arrays;
@@ -321,6 +321,20 @@ public final class Sort
     }
 
 
+    public static void checkSort( Long [ ] a) {
+        for( int i = 0; i < a.length-1; i++ )
+            if( a[i] > a[i+1])
+                System.out.println( "Error at " + i );
+        //System.out.println( "Finished checksort" );
+    }
+
+    public static void print( Long [ ] a )
+    {
+        for( int i = 0; i < a.length; i++ )
+            System.out.print(a[i] + " ");
+        System.out.println();
+    }
+
     private static void checkSort( Integer [ ] a )
     {
         for( int i = 0; i < a.length-1; i++ )
@@ -329,7 +343,7 @@ public final class Sort
         System.out.println( "Finished checksort" );
     }
 
-    private static void checkSort( String [ ] a )
+    public static void checkSort( String [ ] a )
     {
         for( int i = 0; i < a.length-1; i++ )
             if( a[i].compareTo(a[i+1]) > 0)

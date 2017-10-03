@@ -8,7 +8,7 @@ import uow.acc.tab.asmt1.searchtrees.SplayTree;
 import uow.acc.tab.asmt1.searchtrees.RedBlackBST;
 
 /**
- * Answer Sheet for Assignment 1 Tasks 4 - 6
+ * Answer Sheet for Assignment 1 Task2 4 - 6
  * Written by Tab Tu
  * Updated Sep.25 2017
  */
@@ -112,7 +112,7 @@ public class A4_6 {
         // Search with Random in Order Tree
         start = System.currentTimeMillis();
         for (int i = 0; i < numItems; i++) {
-            rbt.equals(ExtFunc.getRandomNumber(numItems));
+            rbt.equals(exts.getRandomNumber(numItems));
         }
         end = System.currentTimeMillis();
         tmus += (end - start) + ",rbt_s;";
@@ -232,21 +232,21 @@ public class A4_6 {
         rbt.clear();
         start = System.currentTimeMillis();
         for (int i = 0; i > numItems; i++) {
-            rbt.add(ExtFunc.getRandomNumber(numItems));
+            rbt.add(exts.getRandomNumber(numItems));
         }
         end = System.currentTimeMillis();
         tmus += (end - start) + ",rbt_iR;";
         // Search with Random in Random Tree
         start = System.currentTimeMillis();
         for (int i = 0; i < numItems; i++) {
-            rbt.contains(ExtFunc.getRandomNumber(numItems));
+            rbt.contains(exts.getRandomNumber(numItems));
         }
         end = System.currentTimeMillis();
         tmus += (end - start) + ",rbt_sR;";
         // Remove in Random
         start = System.currentTimeMillis();
         for (int i = numItems; i > 0; i--) {
-            rbt.remove(ExtFunc.getRandomNumber(numItems));
+            rbt.remove(exts.getRandomNumber(numItems));
         }
         end = System.currentTimeMillis();
         tmus += (end - start) + ",rbt_rR;";

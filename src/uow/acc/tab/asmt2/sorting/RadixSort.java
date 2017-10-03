@@ -1,4 +1,4 @@
-package sorting;
+package uow.acc.tab.asmt2.sorting;
 
 import java.util.ArrayList;
 import java.util.List;

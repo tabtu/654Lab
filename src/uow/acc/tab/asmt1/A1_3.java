@@ -7,7 +7,7 @@ import uow.acc.tab.asmt1.hashTable.SeparateChainingHashTable;
 import uow.acc.tab.asmt1.hashTable.StringHashFamily;
 
 /**
- * Answer Sheet for Assignment 1 Tasks 1 - 3
+ * Answer Sheet for Assignment 1 Task2 1 - 3
  * Written by Tab Tu
  * Updated Sep.25 2017
  */
@@ -16,7 +16,6 @@ public class A1_3 {
     public static CuckooHashTable<String> q1(int n) {
         CuckooHashTable<String> Hc = new CuckooHashTable<>(new StringHashFamily(3), 2000);
         long start, end;
-        double aver1, aver2;
         start = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
             Hc.insert(ExtFunc.getRandomString(10));
