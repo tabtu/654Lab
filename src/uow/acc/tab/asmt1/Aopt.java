@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import java.util.*;
 
 /**
- * Answer Sheet for Assignment 1 Optional Task2
+ * Answer Sheet for Assignment 1 Optional Tasks
  * Written by Tab Tu
  * Updated Oct.1 2017
  */

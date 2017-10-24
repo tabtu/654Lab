@@ -8,7 +8,7 @@ public class ExtFunc {
 
     // Get Random String with length
     public static String getRandomString(int length) {
-        String KeyString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        String KeyString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuffer sb = new StringBuffer();
         int len = KeyString.length();
         for (int i = 0; i < length; i++) {

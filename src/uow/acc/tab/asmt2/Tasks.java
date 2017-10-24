@@ -9,8 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Task2 {
+public class Tasks {
 
+    /**
+     * Task2 in Assignment2, Create by Tab Tu, On Oct.18 2017
+     * @param nums The Maximum Queue Size
+     * @param tms Loop Times
+     */
     public static void task2 (int nums, int tms) {
         long start, end;
         String tums = "MergeSort:   QuickSort:  HeapSort:   dual pivot sorting: ";
@@ -69,80 +74,67 @@ public class Task2 {
             Sort.checkSort( a );
             tums += "   " + (end - start);
             System.out.println(tums);
-            /*
-            // Sorting String objects
-            // Fill array a with random numbers
-            String [ ] b = new String[ NUM_ITEMS];
-
-            for( int i = 0; i < a.length; i++ )
-                b[i] = ExtFunc.getRandomString(10);
-            // MergeSort
-            start = System.currentTimeMillis();
-            Sort.mergeSort(b);
-            end = System.currentTimeMillis();
-            Sort.checkSort(b);
-
-            // Fill array a with random numbers
-            for( int i = 0; i < a.length; i++ ) a[i] = rand.nextLong();
-            // Quick select
-            start = System.currentTimeMillis();
-            int k = 10; // k must be greater than 0 and less than n
-            Sort.quickSelect( a, k); //NUM_ITEMS / 2 );
-            end = System.currentTimeMillis();
-            System.out.println("Quickselect:");
-            //Sort.print(a);
-
-
-            System.out.println("kth smallest = " + a[k-1]);
-            */
         }
 
     }
 
+    /**
+     * Task3 in Assignment2, Create by Tab Tu, On Oct.21 2017
+     * @param nums The Maximum Queue Size
+     * @param tms Loop Times
+     */
     public static void task3 (int nums, int tms) {
-        List<String> lst = new ArrayList<>( );
-        Random r = new Random( );
-
-        final int LEN = 3;
-
-        for( int i = 0; i < 1000000; i++ )
-        {
-            String str = "";
-            int len = LEN; //3 + r.nextInt( 7 ); // between 3 and 9 characters
-
-            for( int j = 0; j < len; j++ )
-                str += (char) ( 'a' + r.nextInt( 26 ) );
-
-            lst.add( str );
-        }
-
-        String [ ] arr1 = new String[ lst.size( ) ];
-        String [ ] arr2 = new String[ lst.size( ) ];
-
-        lst.toArray( arr1 );
-        lst.toArray( arr2 );
-
-        // Print unsorted array
-        //print(arr1);
-
         long start, end;
 
-        start = System.currentTimeMillis( );
-        Arrays.sort( arr1 );
-        end = System.currentTimeMillis( );
-        System.out.println( "Quicksort: " + ( end - start ) );
+        String tums = "MergeSort:   QuickSort:  HeapSort:   dual pivot sorting: ";
+        System.out.println(tums);
+        String [ ] b = new String[ nums];
 
-        start = System.currentTimeMillis( );
-        RadixSort.radixSortA( arr2, LEN );
-        end = System.currentTimeMillis( );
-        System.out.println( "Radix sort: " + ( end - start ) );
+        for (int j = 0; j < tms; j++) {
+            tums = "";
 
-        for( int i = 0; i < arr1.length; i++ )
-            if( !arr1[ i ].equals( arr2[ i ]  ) )
-                System.out.println( "OOPS!!" );
+            // MergeSort
+            for (int i = 0; i < nums; i++) {
+                b[i] = ExtFunc.getRandomString(5);
+            }
+            start = System.currentTimeMillis();
+            Sort.mergeSort(b);
+            end = System.currentTimeMillis();
+            Sort.checkSort(b);
+            tums += (end - start);
 
-        // Print sorted array
-        //print(arr2);
+            // QuickSort
+            for (int i = 0; i < nums; i++) {
+                b[i] = ExtFunc.getRandomString(5);
+            }
+            start = System.currentTimeMillis();
+            Sort.quicksort(b);
+            end = System.currentTimeMillis();
+            Sort.checkSort(b);
+            tums += "   " + (end - start);
+
+            // HeapSort
+            for (int i = 0; i < nums; i++) {
+                b[i] = ExtFunc.getRandomString(5);
+            }
+            start = System.currentTimeMillis();
+            Sort.heapsort(b);
+            end = System.currentTimeMillis();
+            Sort.checkSort(b);
+            tums += "   " + (end - start);
+
+            // Sort dual pivot sorting
+            for (int i = 0; i < nums; i++) {
+                b[i] = ExtFunc.getRandomString(5);
+            }
+            start = System.currentTimeMillis();
+            Arrays.sort(b);
+            end = System.currentTimeMillis();
+            Sort.checkSort(b);
+            tums += "   " + (end - start);
+
+            System.out.println(tums);
+        }
     }
 
     public static void main(String[] args) {
